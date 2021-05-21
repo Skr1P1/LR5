@@ -11,15 +11,13 @@ from random import random
 
 if __name__ == '__main__':
     # номер минимального по модулю элемента списка
-    m = float
+    m = 0
     u = list(map(float, input('Введите вещественные числа -->').split()))
+    a = abs(min(u))
     for i in u:
-        if abs(i) < abs(min(u)):
+        if abs(i) < a:
             m = i
     print(m)
-    for i in u:
-        if i < 0:
-            break
     # сумму модулей элементов списка, расположенных после первого отрицательного элемента
     s = 0
     neg = -1
